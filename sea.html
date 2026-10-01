@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>海の見える景色</title>
+<style>
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #0f172a;
+    font-family: "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+    color: #fff;
+  }
+  svg { width: min(100%, 800px); height: auto; display: block; }
+  h1 { font-weight: normal; font-size: 1.4rem; margin: 16px 0; }
+  .wave { animation: drift 6s ease-in-out infinite alternate; }
+  .wave2 { animation-duration: 8s; animation-direction: alternate-reverse; }
+  @keyframes drift { from { transform: translateX(-20px); } to { transform: translateX(20px); } }
+  .cloud { animation: float 30s linear infinite; }
+  @keyframes float { from { transform: translateX(-100px); } to { transform: translateX(900px); } }
+</style>
+</head>
+<body>
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="海と夕日の絵">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4facfe"/>
+      <stop offset="1" stop-color="#ffd6a5"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1e90c8"/>
+      <stop offset="1" stop-color="#0b3d6b"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="500" fill="url(#sky)"/>
+  <circle cx="560" cy="270" r="50" fill="#fff3b0"/>
+
+  <g class="cloud" fill="#fff" opacity=".85">
+    <ellipse cx="150" cy="90" rx="55" ry="18"/>
+    <ellipse cx="185" cy="78" rx="40" ry="16"/>
+  </g>
+  <g class="cloud" fill="#fff" opacity=".7" style="animation-delay:-14s">
+    <ellipse cx="150" cy="150" rx="45" ry="14"/>
+    <ellipse cx="175" cy="141" rx="30" ry="12"/>
+  </g>
+
+  <rect y="300" width="800" height="200" fill="url(#sea)"/>
+  <rect x="535" y="305" width="50" height="6" rx="3" fill="#fff3b0" opacity=".8"/>
+  <rect x="520" y="325" width="80" height="5" rx="3" fill="#fff3b0" opacity=".6"/>
+  <rect x="500" y="348" width="120" height="4" rx="2" fill="#fff3b0" opacity=".4"/>
+
+  <g class="wave" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".6">
+    <path d="M60 380 q20 -12 40 0 t40 0"/>
+    <path d="M420 410 q20 -12 40 0 t40 0"/>
+  </g>
+  <g class="wave wave2" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity=".5">
+    <path d="M250 440 q20 -12 40 0 t40 0"/>
+    <path d="M620 460 q20 -12 40 0 t40 0"/>
+  </g>
+
+  <g transform="translate(130 295)">
+    <path d="M0 0 h70 l-10 14 h-50 z" fill="#7c3f1d"/>
+    <rect x="34" y="-60" width="3" height="60" fill="#444"/>
+    <path d="M37 -58 l28 44 h-28 z" fill="#fff"/>
+    <path d="M34 -50 l-22 36 h22 z" fill="#ffe4e1"/>
+  </g>
+</svg>
+<h1>夕暮れの海</h1>
+</body>
+</html>

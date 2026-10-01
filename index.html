@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>自己紹介 | Masanori</title>
+<style>
+  :root {
+    --bg: #f6f7fb;
+    --card: #ffffff;
+    --text: #222;
+    --muted: #666;
+    --accent: #3b82f6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #14161c; --card: #1e2128; --text: #eee; --muted: #9aa0ab; --accent: #60a5fa; }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "Hiragino Sans", "Yu Gothic", Meiryo, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.8;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 40px 16px; }
+  header { text-align: center; margin-bottom: 32px; }
+  .avatar {
+    width: 120px; height: 120px; border-radius: 50%;
+    background: var(--accent); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 48px; margin: 0 auto 16px;
+  }
+  h1 { margin: 0; font-size: 28px; }
+  .sub { color: var(--muted); margin: 4px 0 0; }
+  section {
+    background: var(--card);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.08);
+  }
+  h2 { margin: 0 0 8px; font-size: 18px; color: var(--accent); }
+  ul { margin: 0; padding-left: 20px; }
+  .tags span {
+    display: inline-block; padding: 2px 12px; margin: 2px 4px 2px 0;
+    border-radius: 999px; background: var(--bg); font-size: 14px;
+  }
+  a { color: var(--accent); }
+  footer { text-align: center; color: var(--muted); font-size: 13px; margin-top: 24px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="avatar">M</div>
+    <h1>Masanori</h1>
+    <p class="sub">はじめまして！自己紹介ページへようこそ</p>
+  </header>
+
+  <section>
+    <h2>プロフィール</h2>
+    <p>ここに自己紹介文を書いてください。例：プログラミングとAIに興味があり、日々新しいことを学んでいます。</p>
+  </section>
+
+  <section>
+    <h2>好きなこと・趣味</h2>
+    <ul>
+      <li>趣味その1</li>
+      <li>趣味その2</li>
+      <li>趣味その3</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>スキル</h2>
+    <div class="tags">
+      <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Git</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>リンク</h2>
+    <ul>
+      <li><a href="https://github.com/Masanori655">GitHub</a></li>
+    </ul>
+  </section>
+
+  <footer>&copy; 2026 Masanori</footer>
+</div>
+</body>
+</html>
